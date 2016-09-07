@@ -1,4 +1,6 @@
-# haskell
-
-Hello
+Haskell
 ========
+
+Reference
+--------
+http://www.seas.upenn.edu/~cis194/spring15/
