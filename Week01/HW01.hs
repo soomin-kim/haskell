@@ -68,9 +68,9 @@ type Info = (Integer, Peg, Peg, Peg)
 
 -- Tail Call Recursion Helper
 hanoiRec :: Integer -> Peg -> Peg -> Peg -> [Info] -> [Move] -> [Move]
-hanoiRec 1 p1 p2 _ [] s = (p1, p2) : s
+hanoiRec 1 p1 p2 _ [] s                = (p1, p2) : s
 hanoiRec 1 p1 p2 _ ((n, f, t, v):is) s = hanoiRec n f t v is ((p1, p2) : s)
-hanoiRec n p1 p2 p3 is s = hanoiRec (n - 1) p1 p3 p2 ((1, p1, p2, p3) : ((n - 1, p3, p2, p1) : is)) s
+hanoiRec n p1 p2 p3 is s               = hanoiRec (n - 1) p1 p3 p2 ((1, p1, p2, p3) : ((n - 1, p3, p2, p1) : is)) s
 
 hanoi :: Integer -> Peg -> Peg -> Peg -> [Move]
 hanoi n p1 p2 p3
